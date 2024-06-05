@@ -10,9 +10,12 @@
 		BEDE2E052C107CBD00700601 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDE2E042C107CBD00700601 /* AppDelegate.swift */; };
 		BEDE2E072C107CBD00700601 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDE2E062C107CBD00700601 /* SceneDelegate.swift */; };
 		BEDE2E092C107CBD00700601 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDE2E082C107CBD00700601 /* ViewController.swift */; };
-		BEDE2E0C2C107CBD00700601 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = BEDE2E0B2C107CBD00700601 /* Base */; };
 		BEDE2E0E2C107CC000700601 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEDE2E0D2C107CC000700601 /* Assets.xcassets */; };
 		BEDE2E112C107CC000700601 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = BEDE2E102C107CC000700601 /* Base */; };
+		BEDE2E1E2C107D6800700601 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = BEDE2E1D2C107D6800700601 /* Alamofire */; };
+		BEDE2E212C107D7600700601 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = BEDE2E202C107D7600700601 /* SnapKit */; };
+		BEDE2E242C107D8100700601 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = BEDE2E232C107D8100700601 /* Kingfisher */; };
+		BEDE2E262C107DBD00700601 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = BEDE2E252C107DBD00700601 /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,10 +23,10 @@
 		BEDE2E042C107CBD00700601 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEDE2E062C107CBD00700601 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		BEDE2E082C107CBD00700601 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		BEDE2E0B2C107CBD00700601 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BEDE2E0D2C107CC000700601 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BEDE2E102C107CC000700601 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BEDE2E122C107CC000700601 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BEDE2E252C107DBD00700601 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +34,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEDE2E242C107D8100700601 /* Kingfisher in Frameworks */,
+				BEDE2E1E2C107D6800700601 /* Alamofire in Frameworks */,
+				BEDE2E212C107D7600700601 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +46,7 @@
 		BEDE2DF82C107CBD00700601 = {
 			isa = PBXGroup;
 			children = (
+				BEDE2E252C107DBD00700601 /* .gitignore */,
 				BEDE2E032C107CBD00700601 /* WeatherAPI */,
 				BEDE2E022C107CBD00700601 /* Products */,
 			);
@@ -56,15 +63,46 @@
 		BEDE2E032C107CBD00700601 /* WeatherAPI */ = {
 			isa = PBXGroup;
 			children = (
-				BEDE2E042C107CBD00700601 /* AppDelegate.swift */,
-				BEDE2E062C107CBD00700601 /* SceneDelegate.swift */,
-				BEDE2E082C107CBD00700601 /* ViewController.swift */,
-				BEDE2E0A2C107CBD00700601 /* Main.storyboard */,
+				BEDE2E192C107D2C00700601 /* Sources */,
+				BEDE2E182C107D2700700601 /* Resources */,
+			);
+			path = WeatherAPI;
+			sourceTree = "<group>";
+		};
+		BEDE2E182C107D2700700601 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				BEDE2E0D2C107CC000700601 /* Assets.xcassets */,
 				BEDE2E0F2C107CC000700601 /* LaunchScreen.storyboard */,
 				BEDE2E122C107CC000700601 /* Info.plist */,
 			);
-			path = WeatherAPI;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		BEDE2E192C107D2C00700601 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				BEDE2E1B2C107D4B00700601 /* View */,
+				BEDE2E1A2C107D2F00700601 /* App */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		BEDE2E1A2C107D2F00700601 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				BEDE2E042C107CBD00700601 /* AppDelegate.swift */,
+				BEDE2E062C107CBD00700601 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		BEDE2E1B2C107D4B00700601 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BEDE2E082C107CBD00700601 /* ViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +121,11 @@
 			dependencies = (
 			);
 			name = WeatherAPI;
+			packageProductDependencies = (
+				BEDE2E1D2C107D6800700601 /* Alamofire */,
+				BEDE2E202C107D7600700601 /* SnapKit */,
+				BEDE2E232C107D8100700601 /* Kingfisher */,
+			);
 			productName = WeatherAPI;
 			productReference = BEDE2E012C107CBD00700601 /* WeatherAPI.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +154,11 @@
 				Base,
 			);
 			mainGroup = BEDE2DF82C107CBD00700601;
+			packageReferences = (
+				BEDE2E1C2C107D6800700601 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				BEDE2E1F2C107D7600700601 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				BEDE2E222C107D8100700601 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = BEDE2E022C107CBD00700601 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -126,8 +174,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BEDE2E0E2C107CC000700601 /* Assets.xcassets in Resources */,
+				BEDE2E262C107DBD00700601 /* .gitignore in Resources */,
 				BEDE2E112C107CC000700601 /* Base in Resources */,
-				BEDE2E0C2C107CBD00700601 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,14 +195,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		BEDE2E0A2C107CBD00700601 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BEDE2E0B2C107CBD00700601 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		BEDE2E0F2C107CC000700601 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -294,12 +334,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ASU4PNB5MG;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = WeatherAPI/Info.plist;
+				INFOPLIST_FILE = WeatherAPI/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,9 +347,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.geonseobkim.WeatherAPI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -322,12 +366,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ASU4PNB5MG;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = WeatherAPI/Info.plist;
+				INFOPLIST_FILE = WeatherAPI/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -335,9 +379,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.geonseobkim.WeatherAPI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -363,6 +411,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BEDE2E1C2C107D6800700601 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
+			};
+		};
+		BEDE2E1F2C107D7600700601 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+		BEDE2E222C107D8100700601 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.11.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BEDE2E1D2C107D6800700601 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BEDE2E1C2C107D6800700601 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		BEDE2E202C107D7600700601 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BEDE2E1F2C107D7600700601 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		BEDE2E232C107D8100700601 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BEDE2E222C107D8100700601 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BEDE2DF92C107CBD00700601 /* Project object */;
 }
