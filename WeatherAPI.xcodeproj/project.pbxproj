@@ -16,6 +16,8 @@
 		BEDE2E212C107D7600700601 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = BEDE2E202C107D7600700601 /* SnapKit */; };
 		BEDE2E242C107D8100700601 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = BEDE2E232C107D8100700601 /* Kingfisher */; };
 		BEDE2E262C107DBD00700601 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = BEDE2E252C107DBD00700601 /* .gitignore */; };
+		BEDE2E292C1083E600700601 /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDE2E282C1083E600700601 /* APIKey.swift */; };
+		BEDE2E2C2C10841000700601 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDE2E2B2C10841000700601 /* Weather.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,8 @@
 		BEDE2E102C107CC000700601 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BEDE2E122C107CC000700601 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BEDE2E252C107DBD00700601 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		BEDE2E282C1083E600700601 /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
+		BEDE2E2B2C10841000700601 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,8 @@
 			isa = PBXGroup;
 			children = (
 				BEDE2E1B2C107D4B00700601 /* View */,
+				BEDE2E2A2C10840A00700601 /* Model */,
+				BEDE2E272C1083D700700601 /* Utility */,
 				BEDE2E1A2C107D2F00700601 /* App */,
 			);
 			path = Sources;
@@ -103,6 +109,22 @@
 				BEDE2E082C107CBD00700601 /* ViewController.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		BEDE2E272C1083D700700601 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				BEDE2E282C1083E600700601 /* APIKey.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		BEDE2E2A2C10840A00700601 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BEDE2E2B2C10841000700601 /* Weather.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,7 +210,9 @@
 			files = (
 				BEDE2E092C107CBD00700601 /* ViewController.swift in Sources */,
 				BEDE2E052C107CBD00700601 /* AppDelegate.swift in Sources */,
+				BEDE2E292C1083E600700601 /* APIKey.swift in Sources */,
 				BEDE2E072C107CBD00700601 /* SceneDelegate.swift in Sources */,
+				BEDE2E2C2C10841000700601 /* Weather.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
