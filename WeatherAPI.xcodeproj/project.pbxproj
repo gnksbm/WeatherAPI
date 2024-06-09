@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE47DC7D2C15C87400A802F4 /* DateFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE47DC7C2C15C87400A802F4 /* DateFormat.swift */; };
+		BE47DC7F2C15D12900A802F4 /* WeatherInfoLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE47DC7E2C15D12900A802F4 /* WeatherInfoLabel.swift */; };
 		BEDE2E052C107CBD00700601 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDE2E042C107CBD00700601 /* AppDelegate.swift */; };
 		BEDE2E072C107CBD00700601 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDE2E062C107CBD00700601 /* SceneDelegate.swift */; };
 		BEDE2E092C107CBD00700601 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDE2E082C107CBD00700601 /* ViewController.swift */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BE47DC7C2C15C87400A802F4 /* DateFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormat.swift; sourceTree = "<group>"; };
+		BE47DC7E2C15D12900A802F4 /* WeatherInfoLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherInfoLabel.swift; sourceTree = "<group>"; };
 		BEDE2E012C107CBD00700601 /* WeatherAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEDE2E042C107CBD00700601 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEDE2E062C107CBD00700601 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -107,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				BEDE2E082C107CBD00700601 /* ViewController.swift */,
+				BE47DC7E2C15D12900A802F4 /* WeatherInfoLabel.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -114,6 +119,7 @@
 		BEDE2E272C1083D700700601 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				BE47DC7C2C15C87400A802F4 /* DateFormat.swift */,
 				BEDE2E282C1083E600700601 /* APIKey.swift */,
 			);
 			path = Utility;
@@ -210,7 +216,9 @@
 			files = (
 				BEDE2E092C107CBD00700601 /* ViewController.swift in Sources */,
 				BEDE2E052C107CBD00700601 /* AppDelegate.swift in Sources */,
+				BE47DC7D2C15C87400A802F4 /* DateFormat.swift in Sources */,
 				BEDE2E292C1083E600700601 /* APIKey.swift in Sources */,
+				BE47DC7F2C15D12900A802F4 /* WeatherInfoLabel.swift in Sources */,
 				BEDE2E072C107CBD00700601 /* SceneDelegate.swift in Sources */,
 				BEDE2E2C2C10841000700601 /* Weather.swift in Sources */,
 			);

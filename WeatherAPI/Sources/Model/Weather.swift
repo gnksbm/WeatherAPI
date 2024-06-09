@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import CoreLocation
 
 struct WeatherInfo: Codable {
     let coord: Coord
@@ -24,15 +25,15 @@ struct WeatherInfo: Codable {
 
 extension WeatherInfo {
     var temperature: String {
-        "\(main.temp)°C"
+        "지금은 \(main.temp)°C 에요"
     }
     
     var humidity: String {
-        "\(main.humidity.formatted())%"
+        "\(main.humidity.formatted())%만큼 습해요"
     }
     
     var windSpeed: String {
-        "\(wind.speed.formatted())m/s"
+        "\(wind.speed.formatted())m/s의 바람이 불어요"
     }
 }
 
@@ -42,6 +43,26 @@ struct Clouds: Codable {
 
 struct Coord: Codable {
     let lon, lat: Double
+    
+    func getLocationString() async -> String? {
+        let geocoder = CLGeocoder()
+        do {
+            let placemarks = try await geocoder.reverseGeocodeLocation(
+                CLLocation(
+                    latitude: lat,
+                    longitude: lon
+                )
+            )
+            guard let placemark = placemarks.first,
+                  let administrativeArea = placemark.locality,
+                  let subAdministrativeArea = placemark.subLocality
+            else { return nil }
+            return "\(administrativeArea), \(subAdministrativeArea)"
+        } catch {
+            print(error.localizedDescription)
+            return nil
+        }
+    }
 }
 
 struct Main: Codable {
@@ -66,6 +87,10 @@ struct Sys: Codable {
 struct Weather: Codable {
     let id: Int
     let main, description, icon: String
+    
+    var imageURL: URL? {
+        API.weather.getImageURL(weatherCode: id)
+    }
 }
 
 struct Wind: Codable {
