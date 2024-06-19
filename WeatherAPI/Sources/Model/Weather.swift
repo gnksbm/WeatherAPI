@@ -54,12 +54,11 @@ struct Coord: Codable {
                 )
             )
             guard let placemark = placemarks.first,
-                  let administrativeArea = placemark.locality,
-                  let subAdministrativeArea = placemark.subLocality
+                  let administrativeArea = placemark.locality
             else { return nil }
-            return "\(administrativeArea), \(subAdministrativeArea)"
+            return "\(administrativeArea)"
         } catch {
-            print(error.localizedDescription)
+            dump(error)
             return nil
         }
     }

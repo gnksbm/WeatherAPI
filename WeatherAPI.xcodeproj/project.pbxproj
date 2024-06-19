@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		BE47DC7D2C15C87400A802F4 /* DateFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE47DC7C2C15C87400A802F4 /* DateFormat.swift */; };
 		BE47DC7F2C15D12900A802F4 /* WeatherInfoLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE47DC7E2C15D12900A802F4 /* WeatherInfoLabel.swift */; };
+		BEBFC3A82C232D9600F35E82 /* WeatherLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBFC3A72C232D9600F35E82 /* WeatherLocation.swift */; };
 		BEDE2E052C107CBD00700601 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDE2E042C107CBD00700601 /* AppDelegate.swift */; };
 		BEDE2E072C107CBD00700601 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDE2E062C107CBD00700601 /* SceneDelegate.swift */; };
 		BEDE2E092C107CBD00700601 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDE2E082C107CBD00700601 /* ViewController.swift */; };
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		BE47DC7C2C15C87400A802F4 /* DateFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormat.swift; sourceTree = "<group>"; };
 		BE47DC7E2C15D12900A802F4 /* WeatherInfoLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherInfoLabel.swift; sourceTree = "<group>"; };
+		BEBFC3A72C232D9600F35E82 /* WeatherLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherLocation.swift; sourceTree = "<group>"; };
 		BEDE2E012C107CBD00700601 /* WeatherAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEDE2E042C107CBD00700601 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEDE2E062C107CBD00700601 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				BEDE2E2B2C10841000700601 /* Weather.swift */,
+				BEBFC3A72C232D9600F35E82 /* WeatherLocation.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -215,6 +218,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BEDE2E092C107CBD00700601 /* ViewController.swift in Sources */,
+				BEBFC3A82C232D9600F35E82 /* WeatherLocation.swift in Sources */,
 				BEDE2E052C107CBD00700601 /* AppDelegate.swift in Sources */,
 				BE47DC7D2C15C87400A802F4 /* DateFormat.swift in Sources */,
 				BEDE2E292C1083E600700601 /* APIKey.swift in Sources */,

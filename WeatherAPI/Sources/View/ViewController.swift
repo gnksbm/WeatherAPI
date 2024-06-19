@@ -6,12 +6,18 @@
 //
 
 import UIKit
+import CoreLocation
 
 import Alamofire
 import SnapKit
 import Kingfisher
 
 class ViewController: UIViewController {
+    private lazy var locationManager = {
+        let locationManager = CLLocationManager()
+        locationManager.delegate = self
+        return locationManager
+    } ()
     private let dateLabel = {
         let label = UILabel()
         label.textColor = .systemBackground
@@ -128,15 +134,29 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
-        fetchWeatherData()
+        requestLocationAuthorization()
     }
     
-    @objc private func refrechButtonTapped() {
-        fetchWeatherData()
+    private func fetchLocationData(with location: CLLocation) {
+        if let url = API.weather.makeLocationURL(with: location) {
+            AF.request(url).responseDecodable(
+                of: [WeatherLocation].self
+            ) { [weak self] response in
+                guard let self else { return }
+                switch response.result {
+                case .success(let weatherLocations):
+                    if let weatherLocation = weatherLocations.first {
+                        fetchWeatherData(with: weatherLocation.localNames.en)
+                    }
+                case .failure(let error):
+                    dump(error)
+                }
+            }
+        }
     }
     
-    private func fetchWeatherData() {
-        if let url = API.weather.url {
+    private func fetchWeatherData(with locationName: String) {
+        if let url = API.weather.makeWeatherURL(with: locationName) {
             AF.request(url).responseDecodable(
                 of: WeatherInfo.self
             ) { [weak self] response in
@@ -145,7 +165,7 @@ class ViewController: UIViewController {
                 case .success(let weatherInfo):
                     updateView(data: weatherInfo)
                 case .failure(let error):
-                    print(error.localizedDescription)
+                    dump(error)
                 }
             }
         }
@@ -189,5 +209,38 @@ class ViewController: UIViewController {
             make.top.equalTo(headerStackView.snp.bottom).offset(20)
             make.leading.equalTo(dateLabel)
         }
+    }
+    
+    private func requestLocationAuthorization() {
+        locationManager.requestWhenInUseAuthorization()
+    }
+    
+    @objc private func refrechButtonTapped() {
+        locationManager.requestLocation()
+    }
+}
+
+extension ViewController: CLLocationManagerDelegate {
+    func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+        if manager.authorizationStatus == .authorizedWhenInUse ||
+           manager.authorizationStatus == .authorizedAlways {
+            manager.requestLocation()
+        }
+    }
+    
+    func locationManager(
+        _ manager: CLLocationManager,
+        didUpdateLocations locations: [CLLocation]
+    ) {
+        if let location = locations.first {
+            fetchLocationData(with: location)
+        }
+    }
+    
+    func locationManager(
+        _ manager: CLLocationManager,
+        didFailWithError error: any Error
+    ) {
+        locationLabel.text = "위치 정보를 가져오는데 실패했습니다."
     }
 }
